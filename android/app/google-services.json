@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "178570039352",
+    "project_id": "social-app-getx-e1d42",
+    "storage_bucket": "social-app-getx-e1d42.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178570039352:android:daa05219be0ab852a516cd",
+        "android_client_info": {
+          "package_name": "com.example.minimal_social_app_getx"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCORZIn-w1xNlymCITTjeLLTIIWE5mn1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
