@@ -1,20 +1,14 @@
-class User {
-  final String name;
-  final String email;
+import 'package:firebase_auth/firebase_auth.dart';
+
+class UserModel {
   final String uid;
+  final String email;
+  final String name;
 
-//<editor-fold desc="Data Methods">
-  const User({
-    required this.name,
-    required this.email,
+  UserModel({
     required this.uid,
+    required this.email,
+    required this.name,
   });
-
-  Map <String, dynamic> toJson() =>
-      {
-        "name": name,
-        "email": email,
-        "uid": uid
-      };
 
 }

@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:minimal_social_app_getx/constants.dart';
 import 'package:minimal_social_app_getx/view/page/Home_screen_page.dart';
+import 'package:minimal_social_app_getx/view/page/Log_in_page.dart';
 
 class AuthController extends GetxController {
   static AuthController instance = Get.find();
@@ -44,6 +45,11 @@ class AuthController extends GetxController {
   }
   void LogOut () async {
     await firebaseAuth.signOut();
+    Get.to(LogInPage());
+  }
+  User getCurrentUser () {
+    User user = firebaseAuth.currentUser!;
+    return user;
   }
 
 }
