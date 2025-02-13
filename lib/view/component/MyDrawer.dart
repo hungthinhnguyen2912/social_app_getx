@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:minimal_social_app_getx/constants.dart';
 import 'package:minimal_social_app_getx/controller/auth_controller.dart';
+import 'package:minimal_social_app_getx/view/page/Chat_page.dart';
 import 'package:minimal_social_app_getx/view/page/Log_in_page.dart';
 import 'package:minimal_social_app_getx/view/page/Profile_page.dart';
 
@@ -33,6 +34,7 @@ class MyDrawer extends StatelessWidget {
             title: Text('C H A T'),
             leading: Icon(Icons.chat_bubble),
             onTap: () {
+              Get.to(ChatPage());
             },
           ),
           ListTile(

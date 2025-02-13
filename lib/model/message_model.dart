@@ -13,7 +13,7 @@ class Message {
         required this.receiverId,
         required this.message,
         required this.timestamp});
-
+  // Convert to Map or Json
   Map<String,dynamic> toMap () {
     return {
       'senderId' : senderId,
