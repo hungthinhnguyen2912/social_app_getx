@@ -4,10 +4,20 @@ import 'package:get/get.dart';
 import 'package:minimal_social_app_getx/model/message_model.dart';
 
 class MessageController extends GetxController {
-  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-  final FirebaseAuth _auth = FirebaseAuth.instance;
+  var users = <Map<String, dynamic>>[].obs;
 
-  // Gửi tin nhắn
+  static FirebaseFirestore _firestore = FirebaseFirestore.instance;
+  static FirebaseAuth _auth = FirebaseAuth.instance;
+  RxBool isLoading = true.obs;
+  var messages = <QueryDocumentSnapshot>[].obs;
+  RxBool? isCurrentUser;
+
+  @override
+  void onInit () {
+    super.onInit();
+    fetchUser();
+  }
+// Gửi tin nhắn
   Future<void> sendMessage(String message, String receiverId) async {
     try {
       final Timestamp timestamp = Timestamp.now();
@@ -35,19 +45,36 @@ class MessageController extends GetxController {
       print("Error sending message: $e");
     }
   }
-  // Lấy danh sách tin nhắn
-  Stream<QuerySnapshot> getMessages(String otherUserId) {
+
+// Lấy danh sách tin nhắn
+  void getMessages(String otherUserId) {
     final String currentUserId = _auth.currentUser!.uid;
     List<String> ids = [currentUserId, otherUserId];
     ids.sort();
     String chatRoomId = ids.join('_');
 
-    var data = _firestore
+    _firestore
         .collection('chat_room')
         .doc(chatRoomId)
         .collection('message')
         .orderBy('timestamp', descending: true)
-        .snapshots();
-    return data;
+        .snapshots()
+        .listen((snapshot) {
+      messages.value = snapshot.docs;
+    });
+  }
+  Future <void> fetchUser() async {
+    isLoading(true);
+    try {
+      QuerySnapshot snapshot = await _firestore.collection('users').get();
+      // Cập nhật danh sách users
+      users.value =
+          snapshot.docs.map((doc) => doc.data() as Map<String, dynamic>)
+              .toList();
+      isLoading(false);
+    } catch (e) {
+      print("Lỗi khi lấy dữ liệu: $e");
+    }
   }
 }
+
