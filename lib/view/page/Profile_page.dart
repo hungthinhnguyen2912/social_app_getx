@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:minimal_social_app_getx/controller/auth_controller.dart';
 import 'package:minimal_social_app_getx/controller/post_controller.dart';
+import 'package:minimal_social_app_getx/view/component/MyDrawer.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -64,6 +65,7 @@ class ProfilePage extends StatelessWidget {
           ],
         ),
       ),
+      drawer: MyDrawer(),
     );
   }
 }

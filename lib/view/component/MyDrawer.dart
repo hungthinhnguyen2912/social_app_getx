@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:minimal_social_app_getx/constants.dart';
 import 'package:minimal_social_app_getx/controller/auth_controller.dart';
 import 'package:minimal_social_app_getx/view/page/Chat_page.dart';
+import 'package:minimal_social_app_getx/view/page/Home_screen_page.dart';
 import 'package:minimal_social_app_getx/view/page/Log_in_page.dart';
 import 'package:minimal_social_app_getx/view/page/Profile_page.dart';
 
@@ -20,21 +21,21 @@ class MyDrawer extends StatelessWidget {
             title: Text('H O M E'),
             leading: Icon(Icons.home),
             onTap: () {
-              Get.back();
+              Get.off(HomeScreenPage());
             },
           ),
           ListTile(
             title: Text('P R O F I L E'),
             leading: Icon(Icons.account_circle_outlined),
             onTap: () {
-              Get.to(ProfilePage());
+              Get.off(ProfilePage());
             },
           ),
           ListTile(
             title: Text('C H A T'),
             leading: Icon(Icons.chat_bubble),
             onTap: () {
-              Get.to(ChatPage());
+              Get.off(ChatPage());
             },
           ),
           ListTile(

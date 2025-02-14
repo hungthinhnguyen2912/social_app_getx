@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:minimal_social_app_getx/constants.dart';
 import 'package:minimal_social_app_getx/controller/auth_controller.dart';
+import 'package:minimal_social_app_getx/view/component/MyDrawer.dart';
 import 'package:minimal_social_app_getx/view/component/MyTextField.dart';
 import 'package:minimal_social_app_getx/view/page/Home_screen_page.dart';
 import 'package:minimal_social_app_getx/view/page/Sign_up_page.dart';

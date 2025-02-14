@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class chat_bubble extends StatelessWidget {
-  final String messsage;
+  final String message;
   final bool isCurrentUser;
 
-  chat_bubble({super.key, required this.messsage, required this.isCurrentUser});
+  chat_bubble({super.key, required this.message, required this.isCurrentUser});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class chat_bubble extends StatelessWidget {
           color: isCurrentUser ? Colors.blueAccent : Colors.grey[300],
         ),
         child: Text(
-          messsage,
+          message,
           style: TextStyle(fontSize: 16, color: isCurrentUser ? Colors.white : Colors.black),
         ),
       ),
