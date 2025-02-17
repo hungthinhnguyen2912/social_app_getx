@@ -5,10 +5,9 @@ import 'package:minimal_social_app_getx/model/message_model.dart';
 
 class ChatController extends GetxController {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-  final FirebaseAuth auth = FirebaseAuth.instance; // Đổi thành public để truy cập từ UI
+  final FirebaseAuth auth = FirebaseAuth.instance;
   var messages = <Message>[].obs;
 
-  // 🔴 Lấy tin nhắn giữa hai người
   void getMessages(String otherUserId) {
     if (auth.currentUser == null) return;
     final String currentUserId = auth.currentUser!.uid;
