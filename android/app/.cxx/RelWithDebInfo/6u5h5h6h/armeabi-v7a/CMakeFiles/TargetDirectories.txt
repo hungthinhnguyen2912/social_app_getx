@@ -1,0 +1,2 @@
+D:/minimal_social_app_getX/android/app/.cxx/RelWithDebInfo/6u5h5h6h/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/minimal_social_app_getX/android/app/.cxx/RelWithDebInfo/6u5h5h6h/armeabi-v7a/CMakeFiles/rebuild_cache.dir

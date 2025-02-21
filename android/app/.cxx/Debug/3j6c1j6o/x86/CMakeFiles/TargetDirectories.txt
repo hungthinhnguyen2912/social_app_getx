@@ -1,0 +1,2 @@
+D:/minimal_social_app_getX/android/app/.cxx/Debug/3j6c1j6o/x86/CMakeFiles/edit_cache.dir
+D:/minimal_social_app_getX/android/app/.cxx/Debug/3j6c1j6o/x86/CMakeFiles/rebuild_cache.dir
