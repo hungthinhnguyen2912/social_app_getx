@@ -40,7 +40,7 @@ class ChatPage extends StatelessWidget {
           ],
         ),
       ),
-      drawer: MyDrawer(),
+      drawer: MyDrawer(namePage: 'ChatPage',),
     );
   }
 }

@@ -9,21 +9,21 @@ class Message {
 
   Message(
       {required this.senderId,
-        required this.senderEmail,
-        required this.receiverId,
-        required this.message,
-        required this.timestamp});
+      required this.senderEmail,
+      required this.receiverId,
+      required this.message,
+      required this.timestamp});
+
   // Convert to Map or Json
-  Map<String,dynamic> toMap () {
+  Map<String, dynamic> toMap() {
     return {
-      'senderId' : senderId,
-      'senderEmail' : senderEmail,
-      'receiverId' : receiverId,
-      'message' : message,
-      'timestamp' : timestamp
+      'senderId': senderId,
+      'senderEmail': senderEmail,
+      'receiverId': receiverId,
+      'message': message,
+      'timestamp': timestamp
     };
   }
-
   factory Message.fromMap(Map<String, dynamic> map) {
     return Message(
       senderId: map['senderId'] ?? '',
@@ -33,5 +33,4 @@ class Message {
       timestamp: map['timestamp'] ?? Timestamp.now(),
     );
   }
-
 }

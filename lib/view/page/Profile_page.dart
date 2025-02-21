@@ -65,7 +65,7 @@ class ProfilePage extends StatelessWidget {
           ],
         ),
       ),
-      drawer: MyDrawer(),
+      drawer: MyDrawer(namePage: 'ProfilePage',),
     );
   }
 }

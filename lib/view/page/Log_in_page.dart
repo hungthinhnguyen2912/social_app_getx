@@ -23,6 +23,8 @@ class LogInPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Icon(Icons.ad_units_outlined,size: 75,),
+            SizedBox(height: 30,),
             MyTextField(
                 hintText: "Email",
                 obscureText: false,

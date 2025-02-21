@@ -62,7 +62,7 @@ class HomeScreenPage extends StatelessWidget {
           )
         ],
       ),
-      drawer: MyDrawer(),
+      drawer: MyDrawer(namePage:'HomeScreenPage',),
     );
   }
 }

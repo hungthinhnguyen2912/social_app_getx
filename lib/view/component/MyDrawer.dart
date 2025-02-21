@@ -8,7 +8,8 @@ import 'package:minimal_social_app_getx/view/page/Log_in_page.dart';
 import 'package:minimal_social_app_getx/view/page/Profile_page.dart';
 
 class MyDrawer extends StatelessWidget {
-  const MyDrawer({super.key});
+  final String namePage;
+  MyDrawer({super.key, required this.namePage});
 
   @override
   Widget build(BuildContext context) {
@@ -21,21 +22,33 @@ class MyDrawer extends StatelessWidget {
             title: Text('H O M E'),
             leading: Icon(Icons.home),
             onTap: () {
-              Get.off(HomeScreenPage());
+              if (namePage == 'HomeScreenPage') {
+                Get.back();
+              } else {
+                Get.off(HomeScreenPage());
+              }
             },
           ),
           ListTile(
             title: Text('P R O F I L E'),
             leading: Icon(Icons.account_circle_outlined),
             onTap: () {
-              Get.off(ProfilePage());
+              if (namePage == 'ProfilePage') {
+                Get.back();
+              } else {
+                Get.off(ProfilePage());
+              }
             },
           ),
           ListTile(
             title: Text('C H A T'),
             leading: Icon(Icons.chat_bubble),
             onTap: () {
-              Get.off(ChatPage());
+              if (namePage == 'ChatPage') {
+                Get.back();
+              } else {
+                Get.off(ChatPage());
+              }
             },
           ),
           ListTile(

@@ -18,15 +18,17 @@ class ChatDetailPage extends StatelessWidget {
     // Gọi hàm lấy tin nhắn khi vào màn hình chat
     _getx.getMessages(receiverId);
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(receiverEmail),
-      ),
-      body: Column(
-        children: [
-          Expanded(child: _buildMessageList()), // Hiển thị danh sách tin nhắn
-          _buildUserInput(), // Ô nhập tin nhắn
-        ],
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text(receiverEmail),
+        ),
+        body: Column(
+          children: [
+            Expanded(child: _buildMessageList()), // Hiển thị danh sách tin nhắn
+            _buildUserInput(), // Ô nhập tin nhắn
+          ],
+        ),
       ),
     );
   }
